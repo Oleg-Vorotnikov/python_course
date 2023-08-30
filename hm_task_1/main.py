@@ -112,7 +112,8 @@ def abbrev(text: str):
 text1 = ' s df dsjn njajffee e'
 #text1 = 5
 try:
-    print(abbrev(text1))
+    abbr1 = abbrev(text1)
+    print(abbr1.upper())
 except:
     print('Неверный ввод')
 
