@@ -5,14 +5,14 @@ import time
 
 
 def message1(text_list):
-    corr_text = text_list
+    corr_text = text_list.split()
     stop_list = ["Python", "php", "go", "C"]
     corr_text = ''.join(list(filter(lambda x: x not in stop_list, corr_text)))
 
     return corr_text
 
 
-text_list1 = ["asdasd", "Python", "php", "asdfsfd", "yhl,rl", "go", "Cjgf;a"]
+text_list1 = "asdasd Python php asdfsfd yhl,rl go Cjgf;a"
 print(message1(text_list1))
 
 
