@@ -7,7 +7,7 @@ import time
 def message1(text_list):
     corr_text = text_list
     stop_list = ["Python", "php", "go", "C"]
-    corr_text = list(filter(lambda x: x not in stop_list, corr_text))
+    corr_text = ''.join(list(filter(lambda x: x not in stop_list, corr_text)))
 
     return corr_text
 
