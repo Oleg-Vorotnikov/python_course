@@ -18,7 +18,7 @@ class Apple:
             return False
 
     def __del__(self):
-        print(f'Собрали яблоко {self.ind_app}')
+        return None
 
 
 class Tree:
