@@ -14,7 +14,8 @@ class Pupil:
 
 
 class Teacher:
-    cnt_pup = 0
+    def __init__(self):
+        self.cnt_pup = 0
 
     def teach(self, tit_mat: str, *args):
 

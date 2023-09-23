@@ -18,7 +18,7 @@ class Apple:
             return False
 
     def __del__(self):
-        return None
+        print(f'Сорвали яблоко {self.ind_app}')
 
 
 class Tree:
@@ -56,9 +56,9 @@ class Gardener:
             self.list_tree[i].tree_growth()
 
     def harvest(self):
-        for i in range(0, len(self.list_tree)):
+        for i in range(len(self.list_tree)):
             if not self.list_tree[i].stage_all_apple():
-                print(f'Яблоки не созрели на дереве {i}')
+                print(f'Не все яблоки созрели на дереве {i}')
             else:
                 self.list_tree[i].del_all_apple()
                 print(f'Яблоки собраны с дерева {i}')

@@ -32,7 +32,9 @@ class Pupil(People):
 
 
 class Teacher(People):
-    cnt_pup = 0
+    def __init__(self, first_name, last_name, age, sex):
+        super().__init__(first_name, last_name, age, sex)
+        self.cnt_pup = 0
 
     def teach(self, tit_mat: str, *args):
         for item in args:
