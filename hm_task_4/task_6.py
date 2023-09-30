@@ -8,8 +8,8 @@ class Mess_file:
         self.list_array = []
 
     def read_array(self):
-        with open(self.path_file, "r") as f:
-            for line in f:
+        with open(self.path_file, "r") as f:        # С произвольным текстом
+            for line in f:                          # np.genfromtxt не работает
                 self.list_array.append(line)
 
     def search_patr(self, my_patr):

@@ -19,9 +19,9 @@ def oper_arr(A: numpy.ndarray, S: int, last=False):        # А как зада�
     return B, S1
 
 
-vec1 = np.random.randint(20, size=5, dtype=int)
+#vec1 = np.random.randint(20, size=5, dtype=int)
 
-#vec1 = np.random.random(5)
+vec1 = np.random.random(5)
 
 # print(oper_arr(vec1, 10))
 vec2 = oper_arr(vec1, 10)[1]
@@ -30,4 +30,5 @@ vec3 = oper_arr(vec2, 10)[1]
 
 B, S1 = oper_arr(vec3, 5, True)
 print(S1 * 100)
-# не очень какие должны быть случайные величины и что значит вернуть процент
+# не очень понятно какие должны быть случайные величины,
+# и что значит, вернуть процент
