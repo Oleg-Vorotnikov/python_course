@@ -28,3 +28,14 @@ print(df_usd_min.idxmin())
 
 #problem_9
 
+df_last_day_close = df_usd.groupby('YearMonth')['Close'].last().reset_index()
+df_first_day_open = df_usd.groupby('YearMonth')['Open'].first().reset_index()
+
+df_merged = pd.merge(df_last_day_close, df_first_day_open)
+
+filtered_df = df_merged[df_merged['Close'] > df_merged['Open']]
+
+if filtered_df.empty:
+    print("Таких месяцев нет")
+else:
+    print(filtered_df['YearMonth'])
